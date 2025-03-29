@@ -1,0 +1,121 @@
+@import ../variables/variables
+@import ../mixins/mixins
+@import ../typography/font
+
+.welcome_banner
+    height: 2.5rem
+    background-color: $red
+    color: $white
+    @include flex_row_center()
+    font-family: 'hand_written'
+    font-weight: 600
+    font-size: 1.5rem
+    letter-spacing: 10px
+    text-shadow: 2px 2px $blue
+
+    @media screen and ( max-width: 500px)
+        display: none
+
+.line_container
+    .line1
+        margin-top: 4px
+        height: 8px
+        background-color: $red
+        margin-bottom: 0px
+        border: 0
+
+        @media screen and ( max-width: 500px)
+            margin-top: 0
+
+    .line2
+        margin-top: 3px
+        height: 4px
+        background-color: $red
+        margin-bottom: 0px
+        border: 0
+    .line3
+        margin-top: 2px
+        height: 2px
+        background-color: $red
+        margin-bottom: 0px
+        border: 0
+
+.nav_container
+    background-color: $white
+    height: 8rem
+    @include flex_row_center()
+    justify-content: space-between
+    padding: 0rem 4rem 0rem 3rem
+    overflow: hidden
+
+    @media screen and ( max-width: 960px)
+        padding: 0rem 0.5rem 0rem 0.5rem
+
+    @media screen and ( max-width: 500px)
+        height: 4rem    
+    .logo img
+        height: auto
+        width: 24rem
+
+        @media screen and ( max-width: 960px)
+            padding-left: 2rem
+            margin-top: auto
+            padding-left: 0rem
+            width: 13rem
+
+    .center_logo
+        padding-left: 12rem
+        margin-top: auto
+
+        @media screen and ( max-width: 1600px)
+            padding-left: 8rem
+            margin-top: auto
+
+        @media screen and (max-width: 1300px)
+            padding-left: 2rem
+
+        @media screen and (max-width: 500px)
+            padding-left: 2rem
+
+    .center_logo img
+        height: auto
+        width: 29rem
+
+        @media screen and (max-width: 1300px)
+            display: none
+
+    .nav_item
+        list-style: none
+        display: flex
+        font-family: 'hand_written'
+        font-weight: 900
+        font-size: 1.25rem
+        color: $brown
+        
+
+    .nav_item a
+        text-decoration: none
+        color: $brown
+        
+
+    .nav_item 
+        li
+            margin-right: 3rem
+
+            @media screen and (max-width: 960px)
+                margin-right: 1.0rem
+                font-size: 0.85rem
+
+        .nav-link    
+            @media screen and ( max-width: 500px)
+                display: none
+        
+        .hamburger-link .fa-bars
+
+            @media screen and ( min-width: 500px)
+                display: none
+
+            font-size: 2rem
+        
+        
+        

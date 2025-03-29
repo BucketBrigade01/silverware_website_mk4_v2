@@ -1,0 +1,192 @@
+@import ../variables/variables
+@import ../mixins/mixins
+@import ../typography/font
+
+.hero
+    z-index: -2
+    background: linear-gradient(to bottom, $blue, $white)
+    height: 45rem
+    overflow: hidden
+    .hr1
+        margin: 0 0 0 0
+        height: 16px
+        border: 0
+        background-color: $orange
+    .hr2
+        margin: 0 0 0 0
+        height: 8px
+        border: 0
+        background-color: $red
+    .hr3
+        margin: 0 0 0 0
+        height: 8px
+        border: 0
+        background-color: $brown
+
+    @media screen and ( max-width: 500px)
+        height: 35rem
+
+    .hero_contents
+        height: 45rem
+        font-family: 'hand_written'
+        font-weight: 700
+        font-size: 1.25rem
+        letter-spacing: 10px
+        @include flex_row_center()
+        overflow: hidden
+        position: relative
+
+        @media screen and ( max-width: 500px)
+            height: 35rem
+            font-size: 1rem
+
+        .hero_item
+            @include flex_col_center()
+
+            .clouds_fluffy
+                z-index: 0
+                position: absolute
+                animation: fluffy_cloud_movement 120s linear infinite
+                animation-direction: alternate
+                
+                @media screen and ( max-width: 500px)
+                    animation: fluffy_cloud_movement 20s linear infinite
+
+            .clouds_regular
+                z-index: 0
+                position: absolute
+                animation: regular_cloud_movement 120s linear infinite
+                animation-direction: alternate
+
+                @media screen and ( max-width: 500px)
+                    animation: regular_cloud_movement 20s linear infinite
+
+            .flower_logo
+                z-index: 0
+                position: absolute
+                height: auto
+                width: 40rem
+                animation: rotate 80s linear infinite
+
+                @media screen and ( max-width: 500px)
+                    width: 32rem
+
+            .text
+                z-index: 0
+
+                @media screen and ( max-width: 800px)
+                    text-align: center
+
+            .logo
+                width: 40rem
+                margin-bottom: 1rem
+                animation: sinusoid 3s ease-in-out infinite
+
+                @media screen and ( max-width: 500px)
+                    width: 24rem
+
+            .img_roto
+                @include flex_row_center()
+                margin-top: 1rem
+
+                .link
+                    &:hover
+                        z-index: 3
+
+                .rtg_album
+                    z-index: 1
+                    width: 9rem
+                    transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease
+                    opacity: 1.0
+                    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3)
+                    filter: grayscale(.80)
+
+                    &:hover 
+                        z-index: 3
+                        transform: scale(2.0)
+                        opacity: 1
+                        filter: grayscale(10%)
+
+                    @media screen and ( max-width: 500px)
+                        width: 6rem
+                        filter: grayscale(10%)
+                .album 
+                    z-index: 0
+                    width: 16rem
+                    transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease
+                    opacity: 1.0
+                    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3)
+                    filter: grayscale(.80)
+
+                    &:hover 
+                        z-index: 3
+                        transform: scale(1.1)
+                        opacity: 1.0
+                        filter: grayscale(10%)
+
+                    @media screen and ( max-width: 500px)
+                        width: 12rem
+                        filter: grayscale(10%)
+                
+                .sp_album
+                    z-index: 1
+                    width: 9rem
+                    transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease
+                    opacity: 1.0
+                    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3)
+                    filter: grayscale(.80)
+
+                    &:hover 
+                        z-index: 3
+                        transform: scale(2.0)
+                        opacity: 1.0
+                        filter: grayscale(10%)
+
+                    @media screen and ( max-width: 500px)
+                        width: 6rem
+                        filter: grayscale(10%)
+
+@keyframes sinusoid
+    0%
+        transform: translate(0)
+    50%
+        transform: translate(0, 10px)
+    100%
+        transform: translate(0)
+
+@keyframes rotate
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(360deg) 
+
+@keyframes fluffy_cloud_movement
+    0%
+        transform: translate(-1500px)
+
+    100%
+        transform: translate(1500px)
+
+@keyframes regular_cloud_movement
+    0%
+        transform: translate(1500px)
+
+    100%
+        transform: translate(-1500px)
+
+@media screen and ( max-width: 500px)
+    @keyframes fluffy_cloud_movement
+        0%
+            transform: translate(-500px)
+
+        100%
+            transform: translate(500px)
+
+@media screen and ( max-width: 500px)
+    @keyframes regular_cloud_movement
+        0%
+            transform: translate(500px)
+
+        100%
+            transform: translate(-500px)
+    

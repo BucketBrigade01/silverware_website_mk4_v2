@@ -1,0 +1,71 @@
+@import ../variables/variables
+@import ../mixins/mixins
+@import ../typography/font
+
+.about
+    @include flex_row_center()
+    flex-flow: wrap
+    max-width: 1200px
+    margin: 0 auto
+    height: 64rem
+    padding: 2rem
+
+    @media screen and ( max-width: 500px)
+        justify-content: center
+        align-content: center
+        height: 80rem
+        padding-top: 3rem
+
+    .about_image
+        flex: 1
+
+        @media screen and ( max-width: 500px)
+            flex: 0
+
+        img
+            width: 32rem
+            clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%)
+
+            @media screen and ( max-width:  500px)
+                width: 12rem
+
+    .about_container_text
+        flex: 1
+
+        @media screen and ( max-width: 500px)
+            flex: 1
+            padding-top: 3rem
+            text-align: center
+
+        .title
+            font-family: 'frog', serif
+            font-size: 3rem
+            color: $brown
+
+            @media screen and ( max-width: 500px)
+                font-size: 2.5rem
+                text-align: center
+        
+        .blurb
+            font-family: 'hand_written', serif
+            font-size: 1.5rem
+            font-weight: 100
+            color: $gray-brown
+
+        button
+            font-family: 'hand_written' 
+            height: 4rem
+            width: 16rem
+            background-color: $white
+            outline: none
+            border: 4px solid $brown
+            box-shadow: 4px 4px 5px $brown
+            transition: box-shadow 0.3s ease
+            &:hover
+                box-shadow: 8px 8px 5px $brown
+
+            a 
+                text-decoration: none
+                color: $brown
+                font-size: 1.5rem
+                font-weight: 900

@@ -1,0 +1,61 @@
+@import ../variables/variables
+@import ../mixins/mixins
+@import ../typography/font
+
+footer
+    background-color: $brown
+    width: 100%
+    height: 35rem
+    @include flex_col_center()
+
+    @media screen and ( max-width: 500px)
+        height: 40rem
+
+    .footer_container
+        @include flex_col_center()
+        color: $white
+        font-family: 'frog', sans-serif
+        font-size: 3rem
+        margin-bottom: 2rem
+
+        .promo
+            font-family: 'hand_written'
+            font-size: 1.25rem
+            line-height: 2rem
+            margin-bottom: 1rem
+
+            @media screen and ( max-width: 500px)
+                text-align: center
+
+        .icon_container
+            @include flex_row_center()
+            gap: 2rem
+            margin-top: 2rem
+            .fa-brands
+                font-size: 2rem
+                color: $white
+                &:hover
+                    color: $white
+            .fa-brands:not(:hover)
+                color:  $light-brown    
+
+        .nav_items
+            padding: 0 
+            margin-top: 2rem
+            @include flex_row_center()
+            gap: 2rem
+
+            @media screen and ( max-width: 500px)
+                gap: 1.25rem
+
+            a
+                text-decoration: none
+                color: $white
+            li    
+                font-family: 'hand_written'
+                font-size: 1.25rem
+                display: inline
+        .signature
+            font-family: 'hand_written'    
+            font-size: 1.0rem
+            color: $light-brown

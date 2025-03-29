@@ -1,0 +1,110 @@
+@import ../variables/variables
+@import ../mixins/mixins
+@import ../typography/font
+
+.tickets 
+    height: 600px
+    font-family: 'frog', sans-serif
+    font-size: 3rem
+    color: $brown
+    margin:0 auto
+    width: 100%
+    max-width: 1500px
+    @include flex_col_center()
+
+    @media screen and ( max-width: 1100px )
+        margin-top: 16rem
+
+    @media screen and ( max-width: 900px )
+        margin-bottom: 16rem
+
+    @media screen and ( max-width: 500px)
+        margin-top: 16rem
+        font-size: 2.5rem
+
+    .tickets_container
+        width: 100%
+        height: auto
+        @include flex_col_left()
+
+        @media screen and ( max-width: 1050px)
+            margin-top: 1rem
+            width: 70%
+            @include flex_col_center()
+
+        .ticket_item
+            margin: 2rem 0 2rem 0
+            width: 100%
+            font-family: 'hand_written'
+            font-size: 1.5rem
+            @include flex_row_space()
+            flex-flow: wrap
+            justify-content: space-between
+
+            @media screen and ( max-width: 1050px)
+                @include flex_row_center()
+                margin: 1.5rem auto
+                font-size: 1.0
+                margin-bottom: 1.5rem
+
+            .ticket_item_contents
+                @include flex_col_left()
+                width: 19rem
+
+                @media screen and ( max-width: 1050px)
+                    @include flex_col_center()
+                    gap: 1rem
+            
+            .ticket_button_na
+                width: 14rem
+                height: 3rem
+                display: flex
+                justify-content: center
+                align-items: center
+                text-align: center
+                border: 1px solid $brown
+
+            .date
+                font-weight: 900
+                font-size: 1.75rem
+            
+            .title
+                font-weight: 100
+            
+            a
+                text-decoration: none
+
+            .ticket_button
+                width: 14rem
+                height: 3rem
+                border: 0
+                background-color: $green
+                transition: transform 0.3s, box-shadow 0.3s ease
+                font-family: 'hand_written'
+                font-size: 1.5rem
+                font-weight: 900
+                display: flex
+                justify-content: center
+                align-items: center
+                color: $white
+
+                &:hover
+                    transform: scale(1.2)
+                    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3)
+                    cursor: pointer
+
+                @media screen and ( max-width: 1050px)
+                    text-align: center
+
+            .location
+                width: 32rem
+
+                @media screen and ( max-width: 1050px)
+                    text-align: center
+                    font-weight: 100
+        .hr     
+            height: 1px
+            width: 100%
+            margin: 0
+            background-color: $red
+            border: none

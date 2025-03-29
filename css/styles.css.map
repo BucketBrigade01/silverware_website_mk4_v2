@@ -1,0 +1,1 @@
+{"version":3,"sources":["..\\scss\\styles.sass","styles.css"],"names":[],"mappings":"AAEA;EACE,yBAAA;ACDF","file":"styles.css","sourcesContent":["\r\n  \r\nbody\r\n  background-color: #ff5733\r\n","body {\n  background-color: #ff5733;\n}"]}

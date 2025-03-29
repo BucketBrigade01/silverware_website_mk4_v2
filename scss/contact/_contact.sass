@@ -1,0 +1,100 @@
+@import ../variables/variables
+@import ../mixins/mixins
+@import ../typography/font
+
+.contact
+    height: 40rem
+    background: linear-gradient(to bottom, $white, $brown) 
+    @include flex_col_center()
+    font-family: 'frog', sans-serif
+    color: $brown
+    font-size: 3rem
+    .hand
+        position: absolute
+        animation: hand-move 1s infinite alternate ease-in-out
+        left: -16rem
+        scale: 0.9
+
+        @media screen and ( max-width: 1400px )
+            left: -32rem
+
+        @media screen and ( max-width: 1000px )
+            left: -40rem
+
+        @media screen and ( max-width: 500px)
+            display: none
+
+    .contact_container
+        margin-top: 2rem
+        @include flex_col_center()
+        width: 50%
+
+        @media screen and ( max-width: 500px)
+            width: 100%
+
+        .form
+            @include flex_col_center()
+            gap: 1rem
+            width: 50%
+            @media screen and ( max-width: 800px)
+                width: 75%
+
+            input
+                font-family: 'hand_written', sans-serif
+                font-size: 1.5rem
+                font-weight: 900
+                height: 4rem
+                width: 100%
+                max-width: 800px
+                background-color: $white
+                border-radius: 1rem
+                border: none
+                padding-left: 1rem 
+                &:focus
+                    outline: none
+                    border: 2px
+                    border-color: $brown
+                    box-shadow: 0 0 30px $white
+                    
+
+            textarea
+                font-family: 'hand_written', sans-serif
+                font-size: 1.5rem
+                font-weight: 900
+                height: 8rem
+                width: 100%
+                max-width: 800px
+                background-color: $white
+                border-radius: 1rem
+                background-color: $white
+                border: none
+                padding-top: 1rem
+                padding-left: 1rem 
+                &:focus
+                    outline: none
+                    border: 2px
+                    border-color: $brown
+                    box-shadow: 0 0 30px $white
+            
+            button
+                font-family: 'hand_written', serif 
+                font-size: 2rem
+                font-weight: 900
+                width: 75%
+                height: 3rem
+                border-radius: 1rem
+                outline: none
+                border: none
+                background-color: $light-brown
+                &:hover
+                    background-color: $yellow
+                &:active
+                    background-color: $green
+
+@keyframes hand-move
+    0%
+        transform: translate(0, 0)
+    
+    100%
+        transform: translate(0, 4rem)
+    
