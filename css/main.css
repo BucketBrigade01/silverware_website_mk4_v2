@@ -640,6 +640,10 @@ footer .footer_container .nav_items {
     gap: 1.25rem;
   }
 }
+footer .footer_container .nav_items .nav-link {
+  font-family: "hand_written";
+  font-size: 1.25rem;
+}
 footer .footer_container .nav_items a {
   text-decoration: none;
   color: #ebdbcc;
