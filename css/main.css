@@ -1115,4 +1115,70 @@ footer .footer_container .signature {
 .place-holder-grad {
   height: 200px;
   background: linear-gradient(to bottom, #ebdbcc, #2e1c18);
+}
+
+@font-face {
+  font-family: "hand_written";
+  src: url("../assets/fonts/Providence-Sans.otf") format("opentype");
+}
+@font-face {
+  font-family: "frog";
+  src: url("../assets/fonts/SuperFrog-Yqy1q.ttf") format("opentype");
+}
+.vote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 1rem 0 1rem;
+  background: linear-gradient(to right, #df4545, #FADFA1, #eb7e36);
+  margin: 3rem 0 3rem;
+}
+.vote .title {
+  font-size: 3rem;
+  font-family: "frog";
+  text-align: center;
+}
+@media screen and (max-width: 500px) {
+  .vote .title {
+    font-size: 2rem;
+  }
+}
+.vote .description {
+  font-size: 1.5rem;
+  width: 45%;
+  margin: 1rem 0 1rem;
+  font-family: "hand_written";
+  text-align: center;
+}
+@media screen and (max-width: 900px) {
+  .vote .description {
+    width: 90%;
+  }
+}
+.vote button {
+  width: 14rem;
+  height: 3rem;
+  outline: none;
+  border: none;
+  background-color: #eb7e36;
+  transition: transform 0.3s, box-shadow 0.3s ease;
+}
+@media screen and (max-width: 500px) {
+  .vote button {
+    background-color: #7EACB5;
+  }
+}
+.vote button a {
+  text-decoration: none;
+  font-family: "hand_written";
+  font-size: 2rem;
+  color: #FADFA1;
+}
+.vote button:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
