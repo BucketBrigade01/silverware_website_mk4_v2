@@ -420,7 +420,6 @@ body {
   src: url("../assets/fonts/SuperFrog-Yqy1q.ttf") format("opentype");
 }
 .tickets {
-  height: 600px;
   font-family: "frog", sans-serif;
   font-size: 3rem;
   color: #2e1c18;
@@ -439,12 +438,12 @@ body {
 }
 @media screen and (max-width: 900px) {
   .tickets {
-    margin-bottom: 16rem;
+    margin-bottom: 2rem;
   }
 }
 @media screen and (max-width: 500px) {
   .tickets {
-    margin-top: 16rem;
+    margin-top: 2rem;
     font-size: 2.5rem;
   }
 }
